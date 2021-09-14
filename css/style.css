@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+  --nav-color: #1cd3d3;
+  --white-text: #ffffff;
+  --signup-btn: #02d1d4;
+  --signup-btn-hover: #138496;
+  --signin-btn: rgba(9, 128, 240, 0.986);
+  --signin-btn-hover: rgba(32, 56, 78, 0.877);
+  --user-design1: rgb(255, 99, 71);
+  --user-design2: #27b6ba;
+  --happy-users-text: #27b6ba;
+  --feature-bg-hover: #02d1d4;
+  --feature-title: #02d1d4;
+  --feature-icon: #02d1d4;
+  --fa-check-circle: #02d1d4;
+  --about-section-bg: #f5f5f5;
+  --table-header: #76d0d1;
+  --footer-bg: #27b6ba;
+}
+/*  --------- css for all properties  ------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ------------  css for boostrap class   ----------*/
+.row {
+  margin: 0px !important;
+}
+.col-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/*  --------------     Nav bar css start here ---------------------  */
+nav {
+  background-color: var(--nav-color);
+  position: fixed !important;
+  width: 100%;
+  z-index: 100;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.nav-text {
+  color: var(--white-text) !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0px 20px;
+}
+.nav-text::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: var(--white-text);
+  transition: 0.8s ease all;
+}
+.nav-text::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background-color: var(--white-text);
+  transition: 0.8s ease all;
+}
+.nav-text:hover.nav-text::before {
+  width: 100%;
+}
+.nav-text:hover.nav-text::after {
+  width: 100%;
+}
+
+/*  -----------media query for nav bar ------------*/
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    margin-top: 30px;
+  }
+}
+/*  --------------     Nav bar css End here ---------------------  */
+/*  --------------     Intro section css start here ---------------------  */
+
+.intro-section-content {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.intro-section-inner {
+  max-width: 100vw;
+  overflow: hidden;
+}
+.intro-section-content > div > div > h2 {
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.25;
+  font-family: "Montserrat", sans-serif;
+}
+.intro-section-content > div > div > p {
+  color: var(--white-text);
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.sign-up-btn,
+.sign-in-btn {
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 10px 30px;
+  color: var(--white-text);
+}
+
+.sign-up-btn {
+  background: var(--signup-btn);
+  margin-right: 20px;
+  transition: 0.5s ease all;
+}
+.sign-up-btn:hover {
+  color: white;
+  background: var(--signup-btn-hover);
+}
+.sign-in-btn {
+  background: var(--signin-btn);
+  transition: 0.5s ease all;
+}
+.sign-in-btn:hover {
+  background: var(--signin-btn-hover);
+  color: var(--white-text);
+}
+
+/*  --------------     tntro section css End here ---------------------  */
+/*--------------    happy-users-section css start   ---------------------*/
+.happy-users-section {
+  position: relative;
+  top: -12vh;
+  left: 0vw;
+}
+.happy-users-inner {
+  background-color: var(--white-text);
+  overflow: hidden !important;
+  position: relative;
+  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 12%);
+  border-radius: 10px;
+}
+.happy-users-inner::before {
+  content: "";
+  height: 250px;
+  width: 250px;
+  background: var(--user-design1);
+  position: absolute;
+  left: -130px;
+  top: -150px;
+  border-radius: 50%;
+}
+.happy-users-inner::after {
+  content: "";
+  height: 250px;
+  width: 250px;
+  background: var(--user-design2);
+  position: absolute;
+  right: -130px;
+  bottom: -180px;
+  border-radius: 50%;
+}
+.happy-users-inner > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 6%);
+}
+
+.happy-users-text {
+  color: var(--happy-users-text);
+}
+
+/*    ----------  feature-section css start here ----------*/
+.feature-section {
+  margin-bottom: 40px;
+}
+.feature-section-title > div > div {
+  text-align: center;
+}
+.feature-section-title > div > div > h2 {
+  padding-bottom: 40px;
+}
+.feature-section-inner > div > div {
+  padding: 0px 12px !important;
+}
+
+.feature-section-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: var(--white-text);
+  margin-bottom: 50px;
+  border-radius: 5%;
+  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 12%);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease all !important;
+}
+.feature-section-single:hover.feature-section-single {
+  top: -15px;
+  background: var(--feature-bg-hover);
+}
+
+.feature-section-single:hover .feature-icon {
+  color: var(--white-text);
+}
+.feature-section-single:hover.feature-section-single h3 {
+  color: var(--white-text);
+}
+.feature-section-single:hover.feature-section-single p {
+  color: var(--white-text);
+}
+.feature-section-single > h3 {
+  color: var(--feature-title);
+}
+.feature-section-single > p {
+  font-size: 0.8rem;
+}
+.feature-icon {
+  padding: 10px;
+  font-size: 4rem;
+  color: var(--feature-icon);
+  transition: 0.5s ease all !important;
+}
+
+/* ----------- about-section css start  --------------*/
+.about-us {
+  padding: 50px 0px;
+  margin-bottom: 70px;
+  background: var(--about-section-bg);
+}
+.section-heading h2 {
+  padding: 20px;
+}
+.check-list-wrap li {
+  list-style: none;
+  margin: 20px 20px;
+  line-height: 2;
+}
+.fa-check-circle {
+  color: var(--fa-check-circle);
+  margin: 3px;
+}
+
+/*   ----------------  about-us meadia query start here ---------  */
+@media (max-width: 1200px) {
+  .about-right {
+    display: none;
+  }
+}
+
+/*   ---------------  Claims-table section css starts here -----------  */
+.Claims-table-title h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.Claims-table {
+  margin-bottom: 30px;
+}
+.table-header {
+  background-color: var(--table-header);
+}
+
+/*--------------- frequently asked querys section css starts ----------------------*/
+.frequently-asked-title h2 {
+  text-align: center;
+  margin: 50px 0px;
+}
+.frequently-asked-queries {
+  background-color: var(--about-section-bg);
+}
+.accordion-header {
+  color: var(--white-text);
+}
+.accordion-button:not(.collapsed) {
+  color: var(--white-text);
+  background: var(--nav-color);
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.frequently-asked-left {
+  margin: 30px 0px;
+}
+.frequently-asked-right {
+  margin: 180px 0px;
+}
+
+/* ------------  frequently asked querys section media query css starts here ------------*/
+@media (max-width: 991px) {
+  .frequently-asked-left {
+    display: none;
+  }
+  .frequently-asked-right {
+    margin: 50px 0px;
+  }
+  .frequently-asked-title h2 {
+    margin-bottom: 30px;
+  }
+}
+
+/* -------------------   footer  -----------------*/
+
+.footer-text {
+  text-align: center;
+  padding: 50px;
+  background: var(--footer-bg);
+  color: var(--white-text);
+}
